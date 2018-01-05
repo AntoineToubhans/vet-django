@@ -1,0 +1,16 @@
+version: '2'
+services:
+  server:
+    image: python:3.5.2
+    working_dir: /mnt
+    volumes:
+    - .:/mnt
+    ports:
+    - '8000:8000'
+    environment:
+      PYTHONUSERBASE: /mnt/vendor
+    command: python manage.py runserver 0.0.0.0:8000
+  db:
+    image: postgres:9.6.6
+    ports:
+    - '5432:5432'

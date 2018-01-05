@@ -1,0 +1,14 @@
+[Unit]
+Description=Gunicorn server for {{ project_name }}
+
+[Service]
+User=www-data
+Group=www-data
+Environment=PYTHONPATH={{ install_root }}/{{ project_name }}
+Environment=DJANGO_SETTINGS_MODULE=vet_project.settings_staging
+WorkingDirectory={{ install_root }}/{{ project_name }}
+Restart=on-failure
+ExecStart=/usr/bin/gunicorn --workers 2 --env DJANGO_SETTINGS_MODULE=vet_project.settings_staging --bind 127.0.0.1:8000 {{ wsgi_module }}
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,71 @@
+---
+- hosts: servers
+  vars_files:
+    - vars.yml
+  gather_facts: false
+  become: yes
+  pre_tasks:
+    - name: 'update'
+      raw: sudo apt-get update
+
+    - name: 'install python2'
+      raw: sudo apt-get -y install python-simplejson
+
+  tasks:
+    - name: update www-data shell
+      user: name=www-data shell=/bin/bash home=/var/www
+
+    - name: set correct permissions for ssh dir
+      file: path=/var/www/.ssh owner=www-data group=www-data mode=0700 state=directory
+
+    - name: set correct permissions for home folder
+      file: path=/var/www owner=www-data group=www-data recurse=yes
+
+    - name: Install system packages
+      apt: pkg={{ item }} update-cache=yes
+      with_items: "{{ system_packages }}"
+
+    - name: Save ssh key to server
+      copy: src={{ ssh_private_key }} dest=/root/.ssh/id_rsa mode=600
+
+    - name: Create directory for app
+      file: path={{ install_root }}/{{ project_name }} state=directory
+
+    - name: make sure postgresql server is running
+      service: name=postgresql state=started
+
+    - name: create database
+      become_user: postgres
+      postgresql_db: name={{ db_name }}
+
+    - name: create database user
+      become_user: postgres
+      postgresql_user: db={{ db_name }} name={{ db_user }} password={{ db_password }} priv=ALL
+
+    - name: remove default nginx site
+      file: path=/etc/nginx/sites-enabled/default state=absent
+
+    - name: copy nginx config
+      template: src=files/nginx.j2 dest=/etc/nginx/sites-enabled/{{ project_name }}.conf
+      notify:
+      - restart nginx
+
+    - name: Copy gunicorn config
+      template: src=files/gunicorn.j2 dest=/etc/systemd/system/gunicorn.service
+      notify: restart gunicorn
+
+    - name: make sure nginx server is running
+      service: name=nginx state=started enabled=yes
+
+    - name: make sure gunicorn server is running
+      service: name=gunicorn state=started enabled=yes
+
+    # python 3 by default, hack to make django_manage role work with python3
+    - file: src=/usr/bin/python3 dest=/usr/bin/python state=link
+
+  handlers:
+    - name: restart nginx
+      service: name=nginx state=restarted
+
+    - name: restart gunicorn
+      service: name=gunicorn state=restarted
