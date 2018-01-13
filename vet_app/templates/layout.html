@@ -4,7 +4,8 @@
         <meta charset="UTF-8">
         <title>Clinique Vétérinaire de Savigny sur Braye</title>
         {% load static %}
-        <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css" />
+        {% load sass_tags %}
+        <link href="{% sass_src 'css/main.scss' %}" rel="stylesheet" type="text/css" />
         {% block extra_stylesheets %}{% endblock %}
     </head>
     <body>

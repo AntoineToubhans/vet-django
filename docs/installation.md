@@ -40,3 +40,9 @@ Run the following to start Django:
 ```bash
 docker-compose up -d server
 ```
+
+### Compile SCSS
+
+```bash
+docker-compose exec server python manage.py compilescss
+```
