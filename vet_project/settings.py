@@ -129,6 +129,12 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'static'))
 
 
+# Media files
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'media'))
+
+
 # Vet app specific options
 VET_APP_MENU = [{
     'href': 'advises',

@@ -3,3 +3,4 @@ vendor
 static/**
 devops/*.retry
 vet_app/**/*.css
+media/**
