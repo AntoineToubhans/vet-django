@@ -1,3 +1,14 @@
+@import './variables';
+
+@font-face {
+  font-family: 'Futura-Book';
+  src: url('/static/fonts/Futura-Book.woff') format('woff');
+}
+
+*:not(.fa) {
+  font-family: Futura-Book;
+}
+
 body {
-  background-color: #ffdddd;
+  background-color: $main-color-6;
 }
