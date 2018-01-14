@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sass_processor',
-    'vet_app',
+    'vet_app.apps.VetAppConfig',
 ]
 
 MIDDLEWARE = [
