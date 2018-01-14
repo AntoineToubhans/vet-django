@@ -1,12 +1,12 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <h1>Hello, Vets !</h1>
-    <div>
-        Je suis la page equipe :)
-    </div>
-    <div>
-        {% load static %}
-        <img src="{% static 'images/weblogo.png' %}" />
-    </div>
+    {% for person in people %}
+        <div>
+            {{ person.first_name }} {{ person.last_name }}
+            {% if person.imgage %}
+                <img src="{person.image.url}" />
+            {% endif %}
+        </div>
+    {% endfor %}
 {% endblock %}

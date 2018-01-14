@@ -2,6 +2,9 @@ from django.conf import settings
 from django.shortcuts import render
 
 
+from .models import People
+
+
 def index(request):
     return render(request, 'home.html', {
         'menu': settings.VET_APP_MENU,
@@ -10,9 +13,12 @@ def index(request):
 
 
 def team(request):
+    people = People.objects.all().filter(is_active=True)
+
     return render(request, 'team.html', {
         'menu': settings.VET_APP_MENU,
         'current_page': 'team',
+        'people': people,
     })
 
 
