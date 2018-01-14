@@ -127,3 +127,26 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'static'))
+
+
+# Vet app specific options
+VET_APP_MENU = [{
+    'href': 'advises',
+    'name': 'Conseils de saison',
+}, {
+    'href': 'team',
+    'name': 'L\'equipe',
+}, {
+    'href': 'gallery',
+    'name': 'Gallerie',
+}, {
+    'href': 'newsletters',
+    'name': 'Newsletters',
+}, {
+    'href': 'craiglist',
+    'name': 'Petites annonces',
+}, {
+    'href': 'contact',
+    'name': 'Contact',
+}]
+

@@ -20,12 +20,9 @@
                     </a>
                 </div>
                 <div class="menu-items">
-                    <a href="/advises">Conseils de saison</a>
-                    <a href="/team">L'equipe</a>
-                    <a href="/gallery">Gallerie</a>
-                    <a href="/newsletters">Newsletters</a>
-                    <a href="/craiglist">Petites annonces</a>
-                    <a href="/contact">Contact</a>
+                    {% for menu_item in menu %}
+                        <a href="/{{ menu_item.href }}">{{ menu_item.name }}</a>
+                    {% endfor %}
                 </div>
             </div>
         </header>
