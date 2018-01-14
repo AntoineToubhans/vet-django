@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Hello, Vets !</h1>
+    <div>
+        Je suis la homepage :)
+    </div>
+    <div>
+        {% load static %}
+        <img src="{% static 'images/weblogo.png' %}" />
+    </div>
+{% endblock %}

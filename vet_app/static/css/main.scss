@@ -18,21 +18,22 @@ header {
 
   .menu {
     height: 75px;
-    width: 1024px;
+    width: calc(100% - 200px);
     margin: 0 auto;
     display: flex;
+    justify-content: space-between;
 
     &-logo {
+      display: flex;
       overflow: hidden;
-      width: 20%;
 
-      img {
-        height: 118px;
+      a {
+        padding-right: 10px;
       }
     }
 
     &-items {
-      width: 80%;
+      width: 820px;
       display: flex;
       padding: 8px 0 8px 0;
 
