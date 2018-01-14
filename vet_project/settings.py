@@ -138,7 +138,7 @@ VET_APP_MENU = [{
     'name': 'L\'equipe',
 }, {
     'href': 'gallery',
-    'name': 'Gallerie',
+    'name': 'Galerie',
 }, {
     'href': 'newsletters',
     'name': 'Newsletters',

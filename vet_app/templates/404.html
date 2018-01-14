@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block extra_stylesheets %}
+{% load sass_tags %}
+<link href="{% sass_src 'css/main.scss' %}" rel="stylesheet" type="text/css" />
+<link href="{% sass_src 'css/404.scss' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+{% load static %}
+    <div class="not-found">
+        <div class="not-found-message">
+          Désolé, nous n'avons pas trouvé ce que vous recherchez :(
+        </div>
+        <div class="not-found-banner">
+            <img src="{% static 'images/puppy-banner.jpg' %}" />
+        </div>
+    </div>
+{% endblock %}
