@@ -35,7 +35,7 @@ header {
     &-items {
       width: 820px;
       display: flex;
-      padding: 8px 0 8px 0;
+      padding: 0;
 
       a {
         display: inline-flex;
@@ -52,8 +52,14 @@ header {
 
       a:hover {
         color: $text-menu-active;
-        margin-top: 5px;
-        border-bottom: 5px solid $text-menu-active;
+        margin-top: 6px;
+        border-bottom: 6px solid $text-menu-active;
+      }
+
+      a.active {
+        color: #0c4b33;
+        margin-top: 6px;
+        border-bottom: 6px solid #0c4b33;
       }
     }
   }

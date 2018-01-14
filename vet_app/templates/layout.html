@@ -21,7 +21,12 @@
                 </div>
                 <div class="menu-items">
                     {% for menu_item in menu %}
-                        <a href="/{{ menu_item.href }}">{{ menu_item.name }}</a>
+                        <a
+                            href="/{{ menu_item.href }}"
+                            class="{% if current_page == menu_item.href %} active{% endif %}"
+                        >
+                            {{ menu_item.name }}
+                        </a>
                     {% endfor %}
                 </div>
             </div>
