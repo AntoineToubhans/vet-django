@@ -2,13 +2,30 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Clinique Vétérinaire de Savigny sur Braye</title>
+        <title>{% block title %}Clinique Vétérinaire de Savigny sur Braye{% endblock %}</title>
         {% load static %}
         {% load sass_tags %}
         <link href="{% sass_src 'css/main.scss' %}" rel="stylesheet" type="text/css" />
         {% block extra_stylesheets %}{% endblock %}
     </head>
     <body>
+        <header>
+            <div class="menu">
+                <div class="menu-logo">
+                    <a href="/">
+                        <img src="{% static 'images/weblogo.png' %}" />
+                    </a>
+                </div>
+                <div class="menu-items">
+                    <a href="/advises">Conseils de saison</a>
+                    <a href="/team">L'equipe</a>
+                    <a href="/gallery">Gallerie</a>
+                    <a href="/newsletters">Newsletters</a>
+                    <a href="/craiglist">Petites annonces</a>
+                    <a href="/contact">Contact</a>
+                </div>
+            </div>
+        </header>
         {% block content %}{% endblock %}
         {% block extra_scripts %}{% endblock %}
     </body>

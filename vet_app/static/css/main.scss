@@ -10,5 +10,50 @@
 }
 
 body {
-  background-color: $main-color-6;
+  margin: 0;
+}
+
+header {
+  background-color: $main-color-3;
+
+  .menu {
+    height: 75px;
+    width: 1024px;
+    margin: 0 auto;
+    display: flex;
+
+    &-logo {
+      overflow: hidden;
+      width: 20%;
+
+      img {
+        height: 118px;
+      }
+    }
+
+    &-items {
+      width: 80%;
+      display: flex;
+      padding: 8px 0 8px 0;
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-grow: 1;
+        margin: 0;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      a:hover {
+        color: $text-menu-active;
+        margin-top: 5px;
+        border-bottom: 5px solid $text-menu-active;
+      }
+    }
+  }
 }
