@@ -35,6 +35,12 @@ class People(models.Model):
         help_text='Uploader une image au format JPG, (!) taille maximale du fichier: 2Mio'
     )
 
+    is_active = models.BooleanField(
+        verbose_name='Personne active à la clinique?',
+        default=True,
+        help_text='Cocher la case si la personne doit être visible sur la page contact de la clinique',
+    )
+
     created_at = models.DateTimeField(
         auto_now_add=True,
         verbose_name='Date de création de la rubrique',
@@ -45,8 +51,9 @@ class People(models.Model):
         verbose_name_plural = 'L\'equipe'
 
     def __str__(self):
-        return '{first_name} {last_name} ({role})'.format(
+        return '{first_name} {last_name} ({role}) {is_active}'.format(
           role=self.role,
           first_name=self.first_name,
           last_name=self.last_name,
+          is_active='' if self.is_active else '[INACTIF]'
         )
