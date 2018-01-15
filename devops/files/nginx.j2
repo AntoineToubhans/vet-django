@@ -8,6 +8,10 @@ server {
 		alias {{ static_root }};
 	}
 
+	location /media {
+		alias {{ media_root }};
+	}
+
 	location / {
 		proxy_pass http://localhost:8000;
 		proxy_set_header Host $host;

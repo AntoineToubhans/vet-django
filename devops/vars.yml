@@ -36,6 +36,7 @@ ssh_private_key: ~/.ssh/id_rsa
 # here assumes that STATIC_ROOT is set in your settings.py like so:
 # STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'static'))
 static_root: "{{ install_root }}/{{ project_name }}/static"
+media_root: "{{ install_root }}/media"
 
 # the dns name or names (space separated) for your server
 server_name: vet.toubhans.org
