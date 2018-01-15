@@ -45,6 +45,14 @@
     - name: remove default nginx site
       file: path=/etc/nginx/sites-enabled/default state=absent
 
+    - name: Creates django logs directory
+      file:
+        path: "{{ install_root }}/logs"
+        state: directory
+        owner: www-data
+        group: www-data
+        mode: 0775
+
     - name: copy nginx config
       template: src=files/nginx.j2 dest=/etc/nginx/sites-enabled/{{ project_name }}.conf
       notify:

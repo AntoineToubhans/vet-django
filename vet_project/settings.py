@@ -167,4 +167,3 @@ VET_APP_MENU = [{
     'href': 'contact',
     'name': 'Contact',
 }]
-
