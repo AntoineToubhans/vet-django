@@ -1,5 +1,8 @@
+from django.contrib import admin
 from django.db import models
-from .fields import ContentTypeRestrictedFileField
+from image_cropping import ImageCroppingMixin
+from image_cropping import ImageCropField
+from image_cropping import ImageRatioField
 
 
 class People(models.Model):
@@ -25,14 +28,20 @@ class People(models.Model):
         choices=ROLES,
     )
 
-    image = ContentTypeRestrictedFileField(
-        content_types=['image/jpeg'],
-        max_upload_size=2097152,
-        upload_to="people/%Y-%m-%d",
+    image = ImageCropField(
         null=True,
         blank=True,
-        verbose_name='image de profile',
-        help_text='Uploader une image au format JPG, (!) taille maximale du fichier: 2Mio'
+        upload_to="people_profile_image",
+        verbose_name='Image de profile',
+        help_text='Uploader une image de profile pour la personne',
+    )
+
+    cropping_image = ImageRatioField(
+        'image',
+        '360x360',
+        free_crop=True,
+        verbose_name='Selection dans l\'image de profil',
+        help_text='Choisissez la partie de l\'image à afficher',
     )
 
     is_active = models.BooleanField(
@@ -56,4 +65,11 @@ class People(models.Model):
           first_name=self.first_name,
           last_name=self.last_name,
           is_active='' if self.is_active else '[INACTIF]'
+        )
+
+
+class PeopleAdmin(ImageCroppingMixin, admin.ModelAdmin):
+    class Media:
+        js = (
+            'js/jquery.min.js',
         )
