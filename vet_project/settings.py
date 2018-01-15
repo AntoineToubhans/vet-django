@@ -38,8 +38,20 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'sass_processor',
+    'easy_thumbnails',
+    'image_cropping',
     'vet_app.apps.VetAppConfig',
 ]
+
+# little adjustment for image_cropping app
+from easy_thumbnails.conf import Settings as thumbnail_settings
+THUMBNAIL_PROCESSORS = (
+    'image_cropping.thumbnail_processors.crop_corners',
+) + thumbnail_settings.THUMBNAIL_PROCESSORS
+
+# No url for cropping jquery, I include jquery 1.11.3 myself
+IMAGE_CROPPING_JQUERY_URL = None
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

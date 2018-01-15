@@ -3,3 +3,5 @@ Django==2.0
 psycopg2==2.6.2
 django-compressor
 django-sass-processor==0.5.7
+easy-thumbnails==2.5.0
+django-image-cropping==1.1.0
