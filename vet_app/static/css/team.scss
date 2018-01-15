@@ -1,0 +1,49 @@
+.team {
+  margin: 0 auto;
+  width: 1024px;
+
+  @media (max-width: 1024px) {
+    width: 768px;
+  }
+
+  @media (max-width: 768px) {
+    width: 512px;
+  }
+
+  &-title {
+    margin: 50px 0;
+  }
+
+  .people {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+      display: inline-flex;
+      width: 225px;
+      height: 300px;
+      flex-direction: column;
+      text-align: center;
+      margin: 0 15px 20px 16px;
+
+      img {
+        height: 165px;
+        width: 165px;
+        border-radius: 50%;
+        margin: 20px 30px;
+      }
+    }
+
+    &-name {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    &-role {
+      color: gray;
+      font-style: italic;
+    }
+  }
+}

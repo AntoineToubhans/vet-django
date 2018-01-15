@@ -1,12 +1,36 @@
 {% extends "layout.html" %}
 
+{% block extra_stylesheets %}
+{% load sass_tags %}
+<link href="{% sass_src 'css/main.scss' %}" rel="stylesheet" type="text/css" />
+<link href="{% sass_src 'css/team.scss' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
 {% block content %}
-    {% for person in people %}
-        <div>
-            {{ person.first_name }} {{ person.last_name }}
-            {% if person.imgage %}
-                <img src="{person.image.url}" />
-            {% endif %}
+    <div class="team">
+        <h1 class="team-title">
+            L'equipe:
+        </h1>
+        <div class="people">
+            {% for person in people %}
+            <div class="people-item">
+                <div>
+                    {% if person.image %}
+                    {% load cropping %}
+                    <img src="{% cropped_thumbnail person "cropping_image" %}" />
+                    {% else %}
+                    {% load static %}
+                    <img src="{% static 'images/anonymous.jpg' %}" />
+                    {% endif %}
+                </div>
+                <div class="people-name">
+                    {{ person.first_name }} {{ person.last_name }}
+                </div>
+                <div class="people-role">
+                    {{ person.role }}
+                </div>
+            </div>
+            {% endfor %}
         </div>
-    {% endfor %}
+    </div>
 {% endblock %}

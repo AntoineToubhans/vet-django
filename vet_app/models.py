@@ -40,7 +40,7 @@ class People(models.Model):
     cropping_image = ImageRatioField(
         'image',
         '360x360',
-        free_crop=True,
+        free_crop=False,
         verbose_name='Selection dans l\'image de profil',
         help_text='Choisissez la partie de l\'image à afficher',
     )
