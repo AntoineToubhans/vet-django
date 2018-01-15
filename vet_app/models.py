@@ -20,6 +20,7 @@ class People(models.Model):
       ('Docteur Vétérinaire', 'Docteur Vétérinaire'),
       ('ASV', 'ASV'),
       ('Secrétaire comptable', 'Secrétaire comptable'),
+      ('Stagiaire', 'Stagiaire'),
     ]
 
     role = models.CharField(
