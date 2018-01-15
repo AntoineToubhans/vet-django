@@ -1,2 +1,2 @@
 [servers]
-XX.XX.XX.XX ansible_user=ubuntu
+52.14.42.220 ansible_user=ubuntu
