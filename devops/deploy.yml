@@ -31,6 +31,14 @@
       environment:
         DJANGO_SETTINGS_MODULE: "vet_project.settings_staging"
 
+    - name: django compilescss
+      django_manage:
+        command: compilescss
+        app_path: "{{ install_root }}/{{ project_name }}"
+        pythonpath: "{{ pythonpath }}"
+      environment:
+        DJANGO_SETTINGS_MODULE: "vet_project.settings_staging"
+
     - name: django collectstatic
       django_manage:
         command: collectstatic
