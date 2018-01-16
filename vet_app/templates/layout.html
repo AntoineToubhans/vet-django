@@ -3,35 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Clinique Vétérinaire de la Braye{% endblock %}</title>
-        {% load static %}
         {% block extra_stylesheets %}
         {% load sass_tags %}
         <link href="{% sass_src 'css/main.scss' %}" rel="stylesheet" type="text/css" />
         {% endblock %}
     </head>
     <body>
-        <header>
-            <div class="menu">
-                <div class="menu-logo">
-                    <a href="/">
-                        <img src="{% static 'images/weblogo.png' %}" style="height: 118px" />
-                    </a>
-                    <a href="/">
-                        <img src="{% static 'images/weblogo-text.png' %}" style="height: 65px; margin-top: 8px" />
-                    </a>
-                </div>
-                <div class="menu-items">
-                    {% for menu_item in menu %}
-                        <a
-                            href="/{{ menu_item.href }}"
-                            class="{% if current_page == menu_item.href %} active{% endif %}"
-                        >
-                            {{ menu_item.name }}
-                        </a>
-                    {% endfor %}
-                </div>
-            </div>
-        </header>
+        {% include 'header.html' %}
         {% block content %}{% endblock %}
         {% block extra_scripts %}{% endblock %}
     </body>
