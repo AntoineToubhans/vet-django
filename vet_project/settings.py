@@ -153,7 +153,7 @@ VET_APP_MENU = [{
     'name': 'Conseils de saison',
 }, {
     'href': 'team',
-    'name': 'L\'equipe',
+    'name': 'L\'équipe',
 }, {
     'href': 'gallery',
     'name': 'Galerie',

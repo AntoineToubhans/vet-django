@@ -58,7 +58,7 @@ class People(models.Model):
 
     class Meta:
         verbose_name = 'Personne'
-        verbose_name_plural = 'L\'equipe'
+        verbose_name_plural = 'L\'équipe'
 
     def __str__(self):
         return '{first_name} {last_name} ({role}) {is_active}'.format(

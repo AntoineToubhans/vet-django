@@ -8,4 +8,4 @@ urlpatterns = [
     path('404/', views.not_found, name='not_found'),
 ]
 
-handler404 = 'vet_app.views.not_found'
+handler404 = views.not_found
