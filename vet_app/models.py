@@ -13,17 +13,21 @@ class People(models.Model):
     )
 
     ROLES = [
-      ('Docteur Vétérinaire', 'Docteur Vétérinaire'),
-      ('ASV', 'ASV'),
-      ('Secrétaire comptable', 'Secrétaire comptable'),
-      ('Stagiaire', 'Stagiaire'),
+      (0, 'Docteur Vétérinaire Associé(e)'),
+      (1, 'Docteur Vétérinaire'),
+      (2, 'ASV'),
+      (3, 'Secrétaire comptable'),
+      (4, 'Stagiaire'),
     ]
 
-    role = models.CharField(
-        max_length=100,
+    role_int = models.IntegerField(
         verbose_name='role',
         choices=ROLES,
     )
+
+    @property
+    def role(self):
+        return self.ROLES[self.role_int][1]
 
     image = ImageCropField(
         null=True,
