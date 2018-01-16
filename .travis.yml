@@ -6,7 +6,7 @@ install:
 - pip install -r requirements.txt
 cache: pip
 services:
-- postgres
+- postgresql
 env:
 - DJANGO_SETTINGS_MODULE="vet_project.settings_travis"
 script:
