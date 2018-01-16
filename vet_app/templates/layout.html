@@ -9,7 +9,8 @@
         {% endblock %}
     </head>
     <body>
-        {% include 'header.html' %}
+        {% load vet_extras %}
+        {% vet_header %}
         {% block content %}{% endblock %}
         {% block extra_scripts %}{% endblock %}
     </body>

@@ -7,7 +7,6 @@ from .models import People
 
 def index(request):
     return render(request, 'home.html', {
-        'menu': settings.VET_APP_MENU,
         'current_page': 'home',
     })
 
@@ -16,7 +15,6 @@ def team(request):
     people = People.objects.all().filter(is_active=True)
 
     return render(request, 'team.html', {
-        'menu': settings.VET_APP_MENU,
         'current_page': 'team',
         'people': people,
     })
