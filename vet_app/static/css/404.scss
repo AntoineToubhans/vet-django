@@ -1,13 +1,7 @@
 .not-found {
-  &-banner {
-    width: 100%;
-    img {
-      width: 100%;
-    }
-  }
+  text-align: center;
 
   &-message {
-    text-align: center;
     margin: 50px 0 50px 0;
     font-size: 30px;
     font-weight: bold;
