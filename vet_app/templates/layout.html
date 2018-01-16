@@ -3,6 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Clinique Vétérinaire de la Braye{% endblock %}</title>
+        {% load static %}
+        <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
         {% block extra_stylesheets %}
         {% load sass_tags %}
         <link href="{% sass_src 'css/main.scss' %}" rel="stylesheet" type="text/css" />
