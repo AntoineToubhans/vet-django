@@ -1,0 +1,14 @@
+@import './variables';
+
+.home {
+  display: flex;
+  flex-direction: row;
+  min-height: calc(100vh - 75px);
+
+  &-left-menu {
+    flex-direction: column;
+    width: 350px;
+    background-color: $secondary-color;
+    padding: 20px 40px 20px 0;
+  }
+}
