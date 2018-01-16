@@ -1,0 +1,13 @@
+sudo: false
+language: python
+python:
+- "3.5"
+install:
+- pip install -r requirements.txt
+cache: pip
+services:
+- postgres
+env:
+- DJANGO_SETTINGS_MODULE="vet_project.settings_travis"
+script:
+- python manage.py test
