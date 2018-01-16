@@ -6,14 +6,10 @@ from image_cropping import ImageRatioField
 
 
 class People(models.Model):
-    first_name = models.CharField(
+    name = models.CharField(
         max_length=200,
-        verbose_name='Prénom',
-    )
-
-    last_name = models.CharField(
-        max_length=200,
-        verbose_name='Nom de famille',
+        verbose_name='Prénom, Nom de famille',
+        help_text='Nom tel qu\'il apparaîtra sur la page equipe',
     )
 
     ROLES = [
@@ -61,10 +57,9 @@ class People(models.Model):
         verbose_name_plural = 'L\'équipe'
 
     def __str__(self):
-        return '{first_name} {last_name} ({role}) {is_active}'.format(
+        return '{name} ({role}) {is_active}'.format(
           role=self.role,
-          first_name=self.first_name,
-          last_name=self.last_name,
+          name=self.name,
           is_active='' if self.is_active else '[INACTIF]'
         )
 
