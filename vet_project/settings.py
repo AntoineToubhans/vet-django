@@ -147,6 +147,16 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'media'))
 
 
+# SCSS
+SASS_PROCESSOR_ROOT = STATIC_ROOT
+
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'sass_processor.finders.CssFinder',
+]
+
+
 # Vet app specific options
 VET_APP_MENU = [{
     'href': 'advises',
