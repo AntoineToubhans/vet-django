@@ -18,10 +18,3 @@ def team(request):
         'current_page': 'team',
         'people': people,
     })
-
-
-def not_found(request):
-    return render(request, '404.html', {
-        'menu': settings.VET_APP_MENU,
-        'current_page': 'not_found',
-    })
