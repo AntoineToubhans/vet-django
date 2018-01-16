@@ -64,15 +64,15 @@ header {
       }
 
       a:hover {
-        color: $text-menu-active;
+        color: $text-menu-hover;
         padding-top: 6px;
-        border-bottom: 6px solid $text-menu-active;
+        border-bottom: 6px solid $text-menu-hover;
       }
 
       a.active {
-        color: #0c4b33;
+        color: $text-menu-active;
         padding-top: 6px;
-        border-bottom: 6px solid #0c4b33;
+        border-bottom: 6px solid $text-menu-active;
       }
     }
   }
