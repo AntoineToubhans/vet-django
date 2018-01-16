@@ -5,6 +5,11 @@ from image_cropping import ImageCropField
 from image_cropping import ImageRatioField
 
 
+class PeopleManager(models.Manager):
+    def get_ordered_people(self):
+        return self.filter(is_active=True).order_by('role_int', 'name')
+
+
 class People(models.Model):
     name = models.CharField(
         max_length=200,
@@ -55,6 +60,8 @@ class People(models.Model):
         auto_now_add=True,
         verbose_name='Date de création de la rubrique',
     )
+
+    objects = PeopleManager()
 
     class Meta:
         verbose_name = 'Personne'

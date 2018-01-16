@@ -12,7 +12,7 @@ def index(request):
 
 
 def team(request):
-    people = People.objects.all().filter(is_active=True)
+    people = People.objects.get_ordered_people()
 
     return render(request, 'team.html', {
         'current_page': 'team',
