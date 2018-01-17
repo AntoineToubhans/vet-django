@@ -7,8 +7,81 @@
 
   &-left-menu {
     flex-direction: column;
-    width: 350px;
     background-color: $secondary-color;
-    padding: 20px 40px 20px 0;
+  }
+
+  .menu {
+    padding-top: 15px;
+
+    transition: .4s ease-in-out;
+    position: relative;
+    animation: animateleft 0.4s;
+
+    width: $side-menu-width;
+
+    &-opened { left: 0 }
+
+    &-closed {
+      left: 42px - $side-menu-width;
+
+      .menu-items { opacity: 0 }
+    }
+
+    &-items {
+      transition: .2s ease-in-out;
+
+      &-category {
+        font-weight: bold;
+        font-size: 24px;
+        padding: 15px 0 5px 5px;
+        text-transform: uppercase;
+      }
+
+      &-item {
+        padding: 15px 0 12px 26px;
+
+        a {
+          text-decoration: none;
+          color: $blue-color-1;
+        }
+      }
+
+      &-item:hover {
+        cursor: pointer;
+        background-color: $secondary-color-1;
+        border-left: 6px solid $text-menu-active;
+        padding-left: 20px;
+
+        a {
+          color: $text-menu-active;
+        }
+      }
+    }
+
+    &-button {
+      padding: 0 15px;
+      width: calc(100% - 30px);
+      display: flex;
+      justify-content: flex-end;
+
+      a {
+        font-size: 30px;
+        color: $blue-color-3;
+      }
+
+      a:hover {
+        color: $blue-color-1;
+      }
+    }
+  }
+
+  @keyframes animateleft{
+    from{
+      left: -$side-menu-width;
+      opacity: 0;
+    } to{
+      left: 0;
+      opacity: 1;
+    }
   }
 }

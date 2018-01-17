@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
 
+{% load static %}
+
 {% block extra_stylesheets %}
 {% load sass_tags %}
 <link href="{% sass_src 'css/home.scss' %}" rel="stylesheet" type="text/css" />
@@ -7,14 +9,22 @@
 
 {% block content %}
     <div class="home">
-        <div class="home-left-menu">
+        <div class="home-left-menu menu menu-opened">
+            <div class="menu-button">
+                <a href="#" onclick="toggle_menu()">
+                    <i class="fas fa-angle-left"></i>
+                </a>
+            </div>
             {% load vet_extras %}
             {% service_menu %}
         </div>
         <div class="home-content">
-            {% load static %}
             <img src="{% static 'images/weblogo.png' %}" />
             {% block sub_content %}{% endblock %}
         </div>
     </div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{% static 'js/home.js' %}"></script>
 {% endblock %}

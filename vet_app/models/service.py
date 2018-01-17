@@ -1,18 +1,32 @@
 from django.db import models
 
 
+CATEGORY = [
+    (0, 'Animaux de compagnie'),
+    (1, 'Rurale'),
+    (2, 'Equine'),
+]
+
+
+class ServiceManager(models.Manager):
+    def get_service(self, category_int):
+        return [{
+            'title': service.title,
+        } for service in self.filter(category_int=category_int).order_by('title')]
+
+    def get_services(self):
+        return [{
+            'category': category,
+            'services': self.get_service(category_int),
+        } for (category_int, category) in CATEGORY ]
+
+
 class Service(models.Model):
     title = models.CharField(
         max_length=200,
         verbose_name='Titre',
         help_text='Titre tel qu\'il apparaîtra sur le menu de gauche',
     )
-
-    CATEGORY = [
-      (0, 'Animaux de compagnie'),
-      (1, 'Rurale'),
-      (2, 'Equine'),
-    ]
 
     category_int = models.IntegerField(
         verbose_name='categorie',
@@ -27,6 +41,8 @@ class Service(models.Model):
         auto_now_add=True,
         verbose_name='Date de création de la rubrique',
     )
+
+    objects = ServiceManager()
 
     class Meta:
         verbose_name = 'Fiche service'
