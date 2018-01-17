@@ -35,6 +35,7 @@
         font-size: 24px;
         padding: 15px 0 5px 5px;
         text-transform: uppercase;
+        color: $blue-color-1;
       }
 
       &-item {
@@ -42,18 +43,18 @@
 
         a {
           text-decoration: none;
-          color: $blue-color-1;
+          color: $blue-color-3;
         }
       }
 
       &-item:hover {
         cursor: pointer;
         background-color: $secondary-color-1;
-        border-left: 6px solid $text-menu-active;
+        border-left: 6px solid $blue-color-1;
         padding-left: 20px;
 
         a {
-          color: $text-menu-active;
+          color: $blue-color-1;
         }
       }
     }
