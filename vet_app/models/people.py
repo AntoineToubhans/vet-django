@@ -8,7 +8,7 @@ from image_cropping import ImageRatioField
 
 class PeopleManager(models.Manager):
     def get_ordered_people(self):
-        return self.filter(is_active=True).order_by('role_int', 'name')
+        return self.filter(is_active=True).order_by('order', 'role_int', 'name')
 
 
 class People(OrderedModel):
