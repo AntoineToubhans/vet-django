@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'easy_thumbnails',
     'image_cropping',
     'ordered_model',
+    'ckeditor',
     'vet_app.apps.VetAppConfig',
 ]
 
