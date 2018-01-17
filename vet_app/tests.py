@@ -43,3 +43,23 @@ class ServiceModelTest(TestCase):
                 'title': 'Pharmacie',
             }],
         })
+
+    def test_get_services_return_services_for_rural(self):
+        services = Service.objects.get_services()
+
+        self.assertEqual(services[1], {
+            'category': 'Rurale',
+            'services': [{
+                'title': 'La qualit\u00e9 du lait',
+            }],
+        })
+
+    def test_get_services_return_services_for_equine(self):
+        services = Service.objects.get_services()
+
+        self.assertEqual(services[2], {
+            'category': 'Equine',
+            'services': [{
+                'title': 'Location de mat\u00e9riel: N\u00e9bulisateur pour probl\u00e8mes respiratoires',
+            }],
+        })
