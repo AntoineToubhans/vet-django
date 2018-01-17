@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.db import models
+from ordered_model.models import OrderedModel
 from image_cropping import ImageCroppingMixin
 from image_cropping import ImageCropField
 from image_cropping import ImageRatioField
@@ -10,7 +11,7 @@ class PeopleManager(models.Manager):
         return self.filter(is_active=True).order_by('role_int', 'name')
 
 
-class People(models.Model):
+class People(OrderedModel):
     name = models.CharField(
         max_length=200,
         verbose_name='Prénom, Nom de famille',
@@ -63,7 +64,7 @@ class People(models.Model):
 
     objects = PeopleManager()
 
-    class Meta:
+    class Meta(OrderedModel.Meta):
         verbose_name = 'Personne'
         verbose_name_plural = 'L\'équipe'
 
