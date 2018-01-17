@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.db import models
 from ordered_model.models import OrderedModel
+from ordered_model.admin import OrderedModelAdmin
 from image_cropping import ImageCroppingMixin
 from image_cropping import ImageCropField
 from image_cropping import ImageRatioField
@@ -76,7 +77,9 @@ class People(OrderedModel):
         )
 
 
-class PeopleAdmin(ImageCroppingMixin, admin.ModelAdmin):
+class PeopleAdmin(ImageCroppingMixin, OrderedModelAdmin):
+    list_display = ('name', 'role', 'is_active', 'move_up_down_links')
+
     class Media:
         js = (
             'js/jquery.min.js',

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'sass_processor',
     'easy_thumbnails',
     'image_cropping',
+    'ordered_model',
     'vet_app.apps.VetAppConfig',
 ]
 
