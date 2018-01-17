@@ -1,5 +1,7 @@
 from django.contrib import admin
 from django.db import models
+from ordered_model.models import OrderedModel
+from ordered_model.admin import OrderedModelAdmin
 from image_cropping import ImageCroppingMixin
 from image_cropping import ImageCropField
 from image_cropping import ImageRatioField
@@ -7,10 +9,10 @@ from image_cropping import ImageRatioField
 
 class PeopleManager(models.Manager):
     def get_ordered_people(self):
-        return self.filter(is_active=True).order_by('role_int', 'name')
+        return self.filter(is_active=True).order_by('order', 'role_int', 'name')
 
 
-class People(models.Model):
+class People(OrderedModel):
     name = models.CharField(
         max_length=200,
         verbose_name='Prénom, Nom de famille',
@@ -63,7 +65,7 @@ class People(models.Model):
 
     objects = PeopleManager()
 
-    class Meta:
+    class Meta(OrderedModel.Meta):
         verbose_name = 'Personne'
         verbose_name_plural = 'L\'équipe'
 
@@ -75,7 +77,9 @@ class People(models.Model):
         )
 
 
-class PeopleAdmin(ImageCroppingMixin, admin.ModelAdmin):
+class PeopleAdmin(ImageCroppingMixin, OrderedModelAdmin):
+    list_display = ('name', 'role', 'is_active', 'move_up_down_links')
+
     class Media:
         js = (
             'js/jquery.min.js',

@@ -32,15 +32,32 @@ class ServiceModelTest(TestCase):
 
     def test_get_services_return_services_for_puppet(self):
         services = Service.objects.get_services()
-
         self.assertEqual(services[0], {
             'category': 'Animaux de compagnie',
             'services': [{
-                'title': 'Chirurgie - anesth\u00e9sie',
+                'title': 'Alimentation',
+            }, {
+                'title': 'Analyses médicales',
+            }, {
+                'title': 'Chirurgie - anesthésie',
+            }, {
+                'title': 'Consultation des NAC',
+            }, {
+                'title': 'Consultation vaccinale',
+            }, {
+                'title': 'Dermatologie',
+            }, {
+                'title': 'Echographie',
+            }, {
+                'title': 'Hospitalisation',
+            }, {
+                'title': 'Médecine interne',
             }, {
                 'title': 'Ophtalmologie',
             }, {
                 'title': 'Pharmacie',
+            }, {
+                'title': 'Radiographie',
             }],
         })
 
@@ -50,7 +67,25 @@ class ServiceModelTest(TestCase):
         self.assertEqual(services[1], {
             'category': 'Rurale',
             'services': [{
-                'title': 'La qualit\u00e9 du lait',
+                'title': 'Alimentation bovine',
+            }, {
+                'title': 'Boiteries / Parage',
+            }, {
+                'title': 'Chirurgie',
+            }, {
+                'title': 'Elevage des veaux',
+            }, {
+                'title': 'Laboratoire',
+            }, {
+                'title': 'La qualité du lait',
+            }, {
+                'title': 'Location de matériel',
+            }, {
+                'title': 'Nos Services Elevage',
+            }, {
+                'title': 'Ramassage des Fûts Eleveurs 2017',
+            }, {
+                'title': 'Suivi de reproduction sur mesure',
             }],
         })
 
@@ -60,6 +95,12 @@ class ServiceModelTest(TestCase):
         self.assertEqual(services[2], {
             'category': 'Equine',
             'services': [{
+                'title': 'Chirurgies',
+            }, {
+                'title': 'La saison de reproduction',
+            }, {
+                'title': 'Le pack vermifugation équides',
+            }, {
                 'title': 'Location de mat\u00e9riel: N\u00e9bulisateur pour probl\u00e8mes respiratoires',
             }],
         })

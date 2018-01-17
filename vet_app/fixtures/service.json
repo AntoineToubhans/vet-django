@@ -2,40 +2,208 @@
   "model": "vet_app.service",
   "pk": 1,
   "fields": {
-    "title": "Chirurgie - anesth\u00e9sie",
+    "title": "Consultation des NAC",
     "category_int": 0,
-    "created_at": "2018-01-16T21:20:36.904Z"
+    "created_at": "2018-01-16T23:46:17.698Z"
   }
 }, {
   "model": "vet_app.service",
   "pk": 2,
   "fields": {
-    "title": "Pharmacie",
-    "category_int": 0,
-    "created_at": "2018-01-16T21:21:03.790Z"
+    "title": "Ramassage des F\u00fbts Eleveurs 2017",
+    "category_int": 1,
+    "created_at": "2018-01-16T23:46:24.657Z"
   }
 }, {
   "model": "vet_app.service",
   "pk": 3,
   "fields": {
-    "title": "Ophtalmologie",
-    "category_int": 0,
-    "created_at": "2018-01-16T21:21:25.193Z"
+    "title": "Location de mat\u00e9riel: N\u00e9bulisateur pour probl\u00e8mes respiratoires",
+    "category_int": 2,
+    "created_at": "2018-01-16T23:46:30.945Z"
   }
 }, {
   "model": "vet_app.service",
   "pk": 4,
   "fields": {
-    "title": "Location de mat\u00e9riel: N\u00e9bulisateur pour probl\u00e8mes respiratoires",
-    "category_int": 2,
-    "created_at": "2018-01-16T21:21:51.918Z"
+    "title": "Ophtalmologie",
+    "category_int": 0,
+    "created_at": "2018-01-16T23:46:40.119Z"
   }
 }, {
   "model": "vet_app.service",
   "pk": 5,
   "fields": {
+    "title": "Pharmacie",
+    "category_int": 0,
+    "created_at": "2018-01-17T16:47:59.004Z"
+  }
+}, {
+  "model": "vet_app.service",
+  "pk": 6,
+  "fields": {
+    "title": "Chirurgie - anesth\u00e9sie",
+    "category_int": 0,
+    "created_at": "2018-01-17T16:48:33.205Z"
+  }
+}, {
+  "model": "vet_app.service",
+  "pk": 7,
+  "fields": {
+    "title": "Analyses m\u00e9dicales",
+    "category_int": 0,
+    "created_at": "2018-01-17T16:48:44.021Z"
+  }
+}, {
+  "model": "vet_app.service",
+  "pk": 8,
+  "fields": {
+    "title": "Radiographie",
+    "category_int": 0,
+    "created_at": "2018-01-17T16:48:53.079Z"
+  }
+}, {
+  "model": "vet_app.service",
+  "pk": 9,
+  "fields": {
+    "title": "Echographie",
+    "category_int": 0,
+    "created_at": "2018-01-17T16:49:03.337Z"
+  }
+}, {
+  "model": "vet_app.service",
+  "pk": 10,
+  "fields": {
+    "title": "Hospitalisation",
+    "category_int": 0,
+    "created_at": "2018-01-17T16:49:14.652Z"
+  }
+}, {
+  "model": "vet_app.service",
+  "pk": 11,
+  "fields": {
+    "title": "Consultation vaccinale",
+    "category_int": 0,
+    "created_at": "2018-01-17T16:49:28.392Z"
+  }
+}, {
+  "model": "vet_app.service",
+  "pk": 12,
+  "fields": {
+    "title": "M\u00e9decine interne",
+    "category_int": 0,
+    "created_at": "2018-01-17T16:49:39.338Z"
+  }
+}, {
+  "model": "vet_app.service",
+  "pk": 13,
+  "fields": {
+    "title": "Dermatologie",
+    "category_int": 0,
+    "created_at": "2018-01-17T16:49:50.147Z"
+  }
+}, {
+  "model": "vet_app.service",
+  "pk": 14,
+  "fields": {
+    "title": "Alimentation",
+    "category_int": 0,
+    "created_at": "2018-01-17T16:50:04.506Z"
+  }
+}, {
+  "model": "vet_app.service",
+  "pk": 15,
+  "fields": {
+    "title": "Le pack vermifugation \u00e9quides",
+    "category_int": 2,
+    "created_at": "2018-01-17T16:50:31.489Z"
+  }
+}, {
+  "model": "vet_app.service",
+  "pk": 16,
+  "fields": {
+    "title": "Chirurgies",
+    "category_int": 2,
+    "created_at": "2018-01-17T16:50:42.186Z"
+  }
+}, {
+  "model": "vet_app.service",
+  "pk": 17,
+  "fields": {
+    "title": "La saison de reproduction",
+    "category_int": 2,
+    "created_at": "2018-01-17T16:50:52.653Z"
+  }
+}, {
+  "model": "vet_app.service",
+  "pk": 18,
+  "fields": {
+    "title": "Nos Services Elevage",
+    "category_int": 1,
+    "created_at": "2018-01-17T16:51:30.058Z"
+  }
+}, {
+  "model": "vet_app.service",
+  "pk": 19,
+  "fields": {
+    "title": "Location de mat\u00e9riel",
+    "category_int": 1,
+    "created_at": "2018-01-17T16:51:42.617Z"
+  }
+}, {
+  "model": "vet_app.service",
+  "pk": 20,
+  "fields": {
+    "title": "Laboratoire",
+    "category_int": 1,
+    "created_at": "2018-01-17T16:51:52.048Z"
+  }
+}, {
+  "model": "vet_app.service",
+  "pk": 21,
+  "fields": {
+    "title": "Suivi de reproduction sur mesure",
+    "category_int": 1,
+    "created_at": "2018-01-17T16:52:01.371Z"
+  }
+}, {
+  "model": "vet_app.service",
+  "pk": 22,
+  "fields": {
     "title": "La qualit\u00e9 du lait",
     "category_int": 1,
-    "created_at": "2018-01-16T21:22:28.177Z"
+    "created_at": "2018-01-17T16:52:13.250Z"
+  }
+}, {
+  "model": "vet_app.service",
+  "pk": 23,
+  "fields": {
+    "title": "Boiteries / Parage",
+    "category_int": 1,
+    "created_at": "2018-01-17T16:52:23.545Z"
+  }
+}, {
+  "model": "vet_app.service",
+  "pk": 24,
+  "fields": {
+    "title": "Alimentation bovine",
+    "category_int": 1,
+    "created_at": "2018-01-17T16:52:33.123Z"
+  }
+}, {
+  "model": "vet_app.service",
+  "pk": 25,
+  "fields": {
+    "title": "Elevage des veaux",
+    "category_int": 1,
+    "created_at": "2018-01-17T16:52:42.713Z"
+  }
+}, {
+  "model": "vet_app.service",
+  "pk": 26,
+  "fields": {
+    "title": "Chirurgie",
+    "category_int": 1,
+    "created_at": "2018-01-17T16:52:53.868Z"
   }
 }]
