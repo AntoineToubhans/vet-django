@@ -7,8 +7,51 @@
 
   &-left-menu {
     flex-direction: column;
-    width: 350px;
     background-color: $secondary-color;
-    padding: 20px 40px 20px 0;
+  }
+
+  .menu {
+    padding: 15px;
+
+    transition: .4s ease-in-out;
+    position: relative;
+    animation: animateleft 0.4s;
+
+    width: $side-menu-width;
+
+    &-opened { left: 0 }
+
+    &-closed {
+      left: 13px - $side-menu-width;
+
+      .menu-items { opacity: 0 }
+    }
+
+    &-items { transition: .2s ease-in-out }
+
+    &-button {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      a {
+        font-size: 30px;
+        color: $blue-color-3;
+      }
+
+      a:hover {
+        color: $blue-color-1;
+      }
+    }
+  }
+
+  @keyframes animateleft{
+    from{
+      left: -$side-menu-width;
+      opacity: 0;
+    } to{
+      left: 0;
+      opacity: 1;
+    }
   }
 }
