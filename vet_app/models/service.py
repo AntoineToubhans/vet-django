@@ -35,7 +35,7 @@ class Service(models.Model):
 
     @property
     def category(self):
-        return self.CATEGORY[self.category_int][1]
+        return CATEGORY[self.category_int][1]
 
     created_at = models.DateTimeField(
         auto_now_add=True,
