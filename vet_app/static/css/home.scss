@@ -11,7 +11,7 @@
   }
 
   .menu {
-    padding: 15px;
+    padding-top: 15px;
 
     transition: .4s ease-in-out;
     position: relative;
@@ -22,15 +22,45 @@
     &-opened { left: 0 }
 
     &-closed {
-      left: 13px - $side-menu-width;
+      left: 42px - $side-menu-width;
 
       .menu-items { opacity: 0 }
     }
 
-    &-items { transition: .2s ease-in-out }
+    &-items {
+      transition: .2s ease-in-out;
+
+      &-category {
+        font-weight: bold;
+        font-size: 24px;
+        padding: 15px 0 5px 5px;
+        text-transform: uppercase;
+      }
+
+      &-item {
+        padding: 15px 0 12px 26px;
+
+        a {
+          text-decoration: none;
+          color: $blue-color-1;
+        }
+      }
+
+      &-item:hover {
+        cursor: pointer;
+        background-color: $secondary-color-1;
+        border-left: 6px solid $text-menu-active;
+        padding-left: 20px;
+
+        a {
+          color: $text-menu-active;
+        }
+      }
+    }
 
     &-button {
-      width: 100%;
+      padding: 0 15px;
+      width: calc(100% - 30px);
       display: flex;
       justify-content: flex-end;
 
