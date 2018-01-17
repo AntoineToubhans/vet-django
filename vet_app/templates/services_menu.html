@@ -1,7 +1,12 @@
 <div class="menu-items">
-    {% for service in services %}
+    {% for services_category in services %}
         <div>
-            {{ service.title }}
+            {{ services_category.category }}
         </div>
+        {% for service in services_category.services %}
+            <div>
+                {{ service.title }}
+            </div>
+        {% endfor %}
     {% endfor %}
 </div>

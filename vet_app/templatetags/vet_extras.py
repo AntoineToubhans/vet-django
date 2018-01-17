@@ -17,5 +17,5 @@ def vet_header(context):
 @register.inclusion_tag('services_menu.html')
 def service_menu():
     return {
-        'services': Service.objects.all().order_by('category_int', 'title')
+        'services': Service.objects.get_services()
     }
