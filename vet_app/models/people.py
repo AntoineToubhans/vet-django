@@ -59,7 +59,7 @@ class People(OrderedModel):
 
     created_at = models.DateTimeField(
         auto_now_add=True,
-        verbose_name='Date de création de la rubrique',
+        verbose_name='Date de création de la personne',
     )
 
     objects = PeopleManager()

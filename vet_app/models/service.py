@@ -41,7 +41,12 @@ class Service(models.Model):
 
     created_at = models.DateTimeField(
         auto_now_add=True,
-        verbose_name='Date de création de la rubrique',
+        verbose_name='Date de création du service',
+    )
+
+    modified_at = models.DateTimeField(
+        auto_now=True,
+        verbose_name='Date de modification',
     )
 
     content = RichTextField()
@@ -60,5 +65,5 @@ class Service(models.Model):
 
 
 class ServiceAdmin(admin.ModelAdmin):
-    list_display = ('title', 'category')
+    list_display = ('title', 'category', 'modified_at')
     ordering = ['title', 'category_int']
