@@ -1,4 +1,6 @@
+from django.contrib import admin
 from django.db import models
+from ckeditor.fields import RichTextField
 
 
 CATEGORY = [
@@ -42,6 +44,8 @@ class Service(models.Model):
         verbose_name='Date de création de la rubrique',
     )
 
+    content = RichTextField()
+
     objects = ServiceManager()
 
     class Meta:
@@ -53,3 +57,8 @@ class Service(models.Model):
           title=self.title,
           category=self.category,
         )
+
+
+class ServiceAdmin(admin.ModelAdmin):
+    list_display = ('title', 'category')
+    ordering = ['title', 'category_int']
