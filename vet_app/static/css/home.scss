@@ -10,6 +10,12 @@
     background-color: $secondary-color;
   }
 
+  &-content {
+    // TODO: find a way to use the sccs var inside a calc
+    // width: calc(100% - $side-menu-width);
+    width: calc(100% - 350px);
+  }
+
   .menu {
     padding-top: 15px;
 
