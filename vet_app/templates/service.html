@@ -1,5 +1,10 @@
 {% extends "home.html" %}
 
 {% block sub_content %}
-  <h1>{{ current_service.title }}</h1>
+    <div class="service">
+        <h1>{{ current_service.title }}</h1>
+        <div class="service-content">
+            {{ current_service.content }}
+        </div>
+    </div>
 {% endblock %}

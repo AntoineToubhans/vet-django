@@ -1,21 +1,21 @@
+{% load static %}
+{% load sass_tags %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Clinique Vétérinaire de la Braye{% endblock %}</title>
-        {% load static %}
         <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
-        {% load sass_tags %}
         <link href="{% sass_src 'css/main.scss' %}" rel="stylesheet" type="text/css" />
-        {% block extra_stylesheets %}
-        {% endblock %}
+        {% block extra_stylesheets %}{% endblock %}
     </head>
     <body>
         {% load vet_extras %}
         {% vet_header %}
         {% block content %}{% endblock %}
-        <script src="{% static 'js/fontawesome-all.min.js' %}"></script>
-        <script src="{% static 'js/jquery.min.js' %}"></script>
+            <script type="text/javascript" src="{% static 'js/fontawesome-all.min.js' %}"></script>
+            <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
         {% block extra_scripts %}{% endblock %}
     </body>
 </html>
