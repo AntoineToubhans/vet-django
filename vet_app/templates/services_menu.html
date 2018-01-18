@@ -5,7 +5,7 @@
             {{ services_category.category }}
         </div>
         {% for service in services_category.services %}
-            <div class="menu-items-item">
+            <div class="menu-items-item {% if selected_service_id == service.id %} selected{% endif %}">
                 <a href="{% url 'vet_app:services' service.id %}">
                     {{ service.title }}
                 </a>

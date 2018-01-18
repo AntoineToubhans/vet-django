@@ -37,6 +37,7 @@
         }
       }
 
+      &-item.selected,
       &-item:hover {
         cursor: pointer;
         background-color: $secondary-color-1;
