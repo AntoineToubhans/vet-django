@@ -15,7 +15,6 @@
 
     transition: .4s ease-in-out;
     position: relative;
-    animation: animateleft 0.4s;
 
     width: $side-menu-width;
 
@@ -73,16 +72,6 @@
       a:hover {
         color: $blue-color-1;
       }
-    }
-  }
-
-  @keyframes animateleft{
-    from{
-      left: -$side-menu-width;
-      opacity: 0;
-    } to{
-      left: 0;
-      opacity: 1;
     }
   }
 }
