@@ -12,9 +12,7 @@ CATEGORY = [
 
 class ServiceManager(models.Manager):
     def get_service(self, category_int):
-        return [{
-            'title': service.title,
-        } for service in self.filter(category_int=category_int).order_by('title')]
+        return self.filter(category_int=category_int).order_by('title')
 
     def get_services(self):
         return [{
