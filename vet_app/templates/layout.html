@@ -7,7 +7,6 @@
         <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
         {% load sass_tags %}
         <link href="{% sass_src 'css/main.scss' %}" rel="stylesheet" type="text/css" />
-        <script src="{% static 'js/fontawesome-all.min.js' %}"></script>
         {% block extra_stylesheets %}
         {% endblock %}
     </head>
@@ -15,6 +14,7 @@
         {% load vet_extras %}
         {% vet_header %}
         {% block content %}{% endblock %}
+        <script src="{% static 'js/fontawesome-all.min.js' %}"></script>
         <script src="{% static 'js/jquery.min.js' %}"></script>
         {% block extra_scripts %}{% endblock %}
     </body>
