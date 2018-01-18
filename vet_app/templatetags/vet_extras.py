@@ -10,12 +10,15 @@ register = template.Library()
 def vet_header(context):
     return {
         'menu': settings.VET_APP_MENU,
-        'current_page': context.get('current_page', 'none')
+        'current_page': context.get('current_page', 'none'),
     }
 
 
-@register.inclusion_tag('services_menu.html')
-def service_menu():
+@register.inclusion_tag('services_menu.html', takes_context=True)
+def service_menu(context):
+    current_service = context.get('current_service')
+
     return {
-        'services': Service.objects.get_services()
+        'services': Service.objects.get_services(),
+        'selected_service_id': current_service.id if current_service else None,
     }

@@ -4,6 +4,7 @@
   "fields": {
     "title": "Consultation des NAC",
     "category_int": 0,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-16T23:46:17.698Z"
   }
 }, {
@@ -12,6 +13,7 @@
   "fields": {
     "title": "Ramassage des F\u00fbts Eleveurs 2017",
     "category_int": 1,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-16T23:46:24.657Z"
   }
 }, {
@@ -20,6 +22,7 @@
   "fields": {
     "title": "Location de mat\u00e9riel: N\u00e9bulisateur pour probl\u00e8mes respiratoires",
     "category_int": 2,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-16T23:46:30.945Z"
   }
 }, {
@@ -28,6 +31,7 @@
   "fields": {
     "title": "Ophtalmologie",
     "category_int": 0,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-16T23:46:40.119Z"
   }
 }, {
@@ -36,6 +40,7 @@
   "fields": {
     "title": "Pharmacie",
     "category_int": 0,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-17T16:47:59.004Z"
   }
 }, {
@@ -44,6 +49,7 @@
   "fields": {
     "title": "Chirurgie - anesth\u00e9sie",
     "category_int": 0,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-17T16:48:33.205Z"
   }
 }, {
@@ -52,6 +58,7 @@
   "fields": {
     "title": "Analyses m\u00e9dicales",
     "category_int": 0,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-17T16:48:44.021Z"
   }
 }, {
@@ -60,6 +67,7 @@
   "fields": {
     "title": "Radiographie",
     "category_int": 0,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-17T16:48:53.079Z"
   }
 }, {
@@ -68,6 +76,7 @@
   "fields": {
     "title": "Echographie",
     "category_int": 0,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-17T16:49:03.337Z"
   }
 }, {
@@ -76,6 +85,7 @@
   "fields": {
     "title": "Hospitalisation",
     "category_int": 0,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-17T16:49:14.652Z"
   }
 }, {
@@ -84,6 +94,7 @@
   "fields": {
     "title": "Consultation vaccinale",
     "category_int": 0,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-17T16:49:28.392Z"
   }
 }, {
@@ -92,6 +103,7 @@
   "fields": {
     "title": "M\u00e9decine interne",
     "category_int": 0,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-17T16:49:39.338Z"
   }
 }, {
@@ -100,6 +112,7 @@
   "fields": {
     "title": "Dermatologie",
     "category_int": 0,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-17T16:49:50.147Z"
   }
 }, {
@@ -108,6 +121,7 @@
   "fields": {
     "title": "Alimentation",
     "category_int": 0,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-17T16:50:04.506Z"
   }
 }, {
@@ -116,6 +130,7 @@
   "fields": {
     "title": "Le pack vermifugation \u00e9quides",
     "category_int": 2,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-17T16:50:31.489Z"
   }
 }, {
@@ -124,6 +139,7 @@
   "fields": {
     "title": "Chirurgies",
     "category_int": 2,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-17T16:50:42.186Z"
   }
 }, {
@@ -132,6 +148,7 @@
   "fields": {
     "title": "La saison de reproduction",
     "category_int": 2,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-17T16:50:52.653Z"
   }
 }, {
@@ -140,6 +157,7 @@
   "fields": {
     "title": "Nos Services Elevage",
     "category_int": 1,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-17T16:51:30.058Z"
   }
 }, {
@@ -148,6 +166,7 @@
   "fields": {
     "title": "Location de mat\u00e9riel",
     "category_int": 1,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-17T16:51:42.617Z"
   }
 }, {
@@ -156,6 +175,7 @@
   "fields": {
     "title": "Laboratoire",
     "category_int": 1,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-17T16:51:52.048Z"
   }
 }, {
@@ -164,6 +184,7 @@
   "fields": {
     "title": "Suivi de reproduction sur mesure",
     "category_int": 1,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-17T16:52:01.371Z"
   }
 }, {
@@ -172,6 +193,7 @@
   "fields": {
     "title": "La qualit\u00e9 du lait",
     "category_int": 1,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-17T16:52:13.250Z"
   }
 }, {
@@ -180,6 +202,7 @@
   "fields": {
     "title": "Boiteries / Parage",
     "category_int": 1,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-17T16:52:23.545Z"
   }
 }, {
@@ -188,6 +211,7 @@
   "fields": {
     "title": "Alimentation bovine",
     "category_int": 1,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-17T16:52:33.123Z"
   }
 }, {
@@ -196,6 +220,7 @@
   "fields": {
     "title": "Elevage des veaux",
     "category_int": 1,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-17T16:52:42.713Z"
   }
 }, {
@@ -204,6 +229,7 @@
   "fields": {
     "title": "Chirurgie",
     "category_int": 1,
+    "modified_at": "2018-01-17T23:46:17.698Z",
     "created_at": "2018-01-17T16:52:53.868Z"
   }
 }]

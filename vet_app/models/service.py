@@ -1,4 +1,6 @@
+from django.contrib import admin
 from django.db import models
+from ckeditor.fields import RichTextField
 
 
 CATEGORY = [
@@ -10,9 +12,7 @@ CATEGORY = [
 
 class ServiceManager(models.Manager):
     def get_service(self, category_int):
-        return [{
-            'title': service.title,
-        } for service in self.filter(category_int=category_int).order_by('title')]
+        return self.filter(category_int=category_int).order_by('title')
 
     def get_services(self):
         return [{
@@ -39,8 +39,15 @@ class Service(models.Model):
 
     created_at = models.DateTimeField(
         auto_now_add=True,
-        verbose_name='Date de création de la rubrique',
+        verbose_name='Date de création du service',
     )
+
+    modified_at = models.DateTimeField(
+        auto_now=True,
+        verbose_name='Date de modification',
+    )
+
+    content = RichTextField()
 
     objects = ServiceManager()
 
@@ -53,3 +60,8 @@ class Service(models.Model):
           title=self.title,
           category=self.category,
         )
+
+
+class ServiceAdmin(admin.ModelAdmin):
+    list_display = ('title', 'category', 'modified_at')
+    ordering = ['title', 'category_int']

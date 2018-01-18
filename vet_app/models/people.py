@@ -1,4 +1,3 @@
-from django.contrib import admin
 from django.db import models
 from ordered_model.models import OrderedModel
 from ordered_model.admin import OrderedModelAdmin
@@ -60,7 +59,7 @@ class People(OrderedModel):
 
     created_at = models.DateTimeField(
         auto_now_add=True,
-        verbose_name='Date de création de la rubrique',
+        verbose_name='Date de création de la personne',
     )
 
     objects = PeopleManager()
