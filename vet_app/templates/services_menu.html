@@ -6,7 +6,7 @@
         </div>
         {% for service in services_category.services %}
             <div class="menu-items-item">
-                <a href="#">
+                <a href="{% url 'vet_app:services' service.id %}">
                     {{ service.title }}
                 </a>
             </div>

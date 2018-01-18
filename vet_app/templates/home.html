@@ -14,8 +14,9 @@
             {% service_menu %}
         </div>
         <div class="home-content">
-            <img src="{% static 'images/weblogo.png' %}" />
-            {% block sub_content %}{% endblock %}
+            {% block sub_content %}
+                <img src="{% static 'images/weblogo.png' %}" />
+            {% endblock %}
         </div>
     </div>
 {% endblock %}
