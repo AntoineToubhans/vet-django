@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'image_cropping',
     'ordered_model',
     'ckeditor',
+    'ckeditor_uploader',
     'vet_app.apps.VetAppConfig',
 ]
 
@@ -147,7 +148,7 @@ STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'static'))
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'media'))
-
+CKEDITOR_UPLOAD_PATH = 'ckeditor_uploads/'
 
 # SCSS
 SASS_PROCESSOR_ROOT = STATIC_ROOT
