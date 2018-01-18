@@ -9,12 +9,7 @@
 
 {% block content %}
     <div class="home">
-        <div class="home-left-menu menu menu-opened">
-            <div class="menu-button">
-                <a href="#" onclick="toggle_menu()">
-                    <i class="fas fa-angle-left"></i>
-                </a>
-            </div>
+        <div class="home-left-menu menu">
             {% load vet_extras %}
             {% service_menu %}
         </div>
@@ -23,8 +18,4 @@
             {% block sub_content %}{% endblock %}
         </div>
     </div>
-{% endblock %}
-
-{% block extra_scripts %}
-<script src="{% static 'js/home.js' %}"></script>
 {% endblock %}

@@ -14,17 +14,8 @@
     padding-top: 15px;
 
     transition: .4s ease-in-out;
-    position: relative;
 
     width: $side-menu-width;
-
-    &-opened { left: 0 }
-
-    &-closed {
-      left: 42px - $side-menu-width;
-
-      .menu-items { opacity: 0 }
-    }
 
     &-items {
       transition: .2s ease-in-out;
