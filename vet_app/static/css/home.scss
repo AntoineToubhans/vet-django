@@ -30,11 +30,9 @@
 
       &-item {
         padding: 13px 0 10px 26px;
-
-        a {
-          text-decoration: none;
-          color: $blue-color-3;
-        }
+        text-decoration: none;
+        color: $blue-color-3;
+        display: block;
       }
 
       &-item.selected,
@@ -43,10 +41,7 @@
         background-color: $secondary-color-1;
         border-left: 6px solid $blue-color-1;
         padding-left: 20px;
-
-        a {
-          color: $blue-color-1;
-        }
+        color: $blue-color-1;
       }
     }
 
