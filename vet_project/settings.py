@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'image_cropping',
     'ordered_model',
     'ckeditor',
+    'ckeditor_uploader',
     'vet_app.apps.VetAppConfig',
 ]
 
@@ -125,7 +126,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fr-fr'
 
 TIME_ZONE = 'UTC'
 
@@ -147,7 +148,7 @@ STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'static'))
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.abspath(os.path.join(BASE_DIR, 'media'))
-
+CKEDITOR_UPLOAD_PATH = 'ckeditor_uploads/'
 
 # SCSS
 SASS_PROCESSOR_ROOT = STATIC_ROOT
@@ -157,6 +158,75 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'sass_processor.finders.CssFinder',
 ]
+
+
+# CKeditor config
+CKEDITOR_IMAGE_BACKEND = 'pillow'
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar_Basic': [
+            ['Source', '-', 'Bold', 'Italic']
+        ],
+        'toolbar_VetToolbarConfig': [{
+            'name': 'document',
+            'items': ['Source', '-', 'NewPage', 'Preview', 'Print', '-', 'Templates'],
+        }, {
+            'name': 'clipboard',
+            'items': ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo'],
+        }, {
+            'name': 'editing', 'items': ['Find', 'Replace', '-', 'SelectAll'],
+        }, {
+            'name': 'forms',
+            'items': ['Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 'HiddenField'],
+        }, '/', {
+            'name': 'basicstyles',
+            'items': ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat'],
+        }, {
+            'name': 'paragraph',
+            'items': ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-',
+                      'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl',
+                      'Language'],
+        }, {
+            'name': 'links',
+            'items': ['Link', 'Unlink', 'Anchor'],
+        }, {
+            'name': 'insert',
+            'items': ['Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe'],
+        }, '/', {
+            'name': 'styles',
+            'items': ['Styles', 'Format', 'Font', 'FontSize'],
+        }, {
+            'name': 'colors',
+            'items': ['TextColor', 'BGColor'],
+        }, {
+            'name': 'tools',
+            'items': ['Maximize', 'ShowBlocks'],
+        }, {
+            'name': 'about',
+            'items': ['About', 'Save'],
+        }],
+        'toolbar': 'VetToolbarConfig',
+        'width': '100%',
+        'tabSpaces': 4,
+        'extraPlugins': ','.join([
+            'uploadimage',
+            # your extra plugins here
+            'div',
+            'autolink',
+            'autoembed',
+            'embedsemantic',
+            'autogrow',
+            'language',
+            # 'devtools',
+            'widget',
+            'lineutils',
+            'clipboard',
+            'dialog',
+            'dialogui',
+            'elementspath'
+        ]),
+    }
+}
 
 
 # Vet app specific options
