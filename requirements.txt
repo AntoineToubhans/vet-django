@@ -1,5 +1,6 @@
 gunicorn==19.4.5
 Django==2.0
+libsass==0.13.6
 psycopg2==2.7.3.2
 django-compressor
 django-sass-processor==0.5.7
