@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'solo',
+    'phonenumber_field',
     'vet_app.apps.VetAppConfig',
 ]
 
@@ -229,6 +230,9 @@ CKEDITOR_CONFIGS = {
     }
 }
 
+
+PHONENUMBER_DEFAULT_REGION = 'FR'
+PHONENUMBER_DB_FORMAT = 'NATIONAL'
 
 # Vet app specific options
 VET_APP_MENU = [{
