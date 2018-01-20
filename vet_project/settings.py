@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'ordered_model',
     'ckeditor',
     'ckeditor_uploader',
+    'solo',
     'vet_app.apps.VetAppConfig',
 ]
 

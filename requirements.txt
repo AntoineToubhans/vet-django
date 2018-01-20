@@ -8,3 +8,4 @@ easy-thumbnails==2.5.0
 django-image-cropping==1.1.0
 django-ordered-model==1.4.3
 django-ckeditor==5.4.0
+django-solo==1.1.3
