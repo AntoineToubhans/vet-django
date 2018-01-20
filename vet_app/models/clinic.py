@@ -19,6 +19,11 @@ class ClinicConfiguration(SingletonModel):
         blank=True,
     )
 
+    email = models.EmailField(
+        verbose_name='Email de la clinique',
+        blank=True,
+    )
+
     class Meta:
         verbose_name = 'Paramètre de la clinique'
 
