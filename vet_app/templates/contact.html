@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block extra_stylesheets %}
+{% load sass_tags %}
+<link href="{% sass_src 'css/contact.scss' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+    <div class="contact">
+        <h1 class="contact-title">
+            Contacts
+        </h1>
+    </div>
+{% endblock %}
