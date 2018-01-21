@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'solo',
     'phonenumber_field',
     'multiselectfield',
+    'djgeojson',
+    'leaflet',
     'vet_app.apps.VetAppConfig',
 ]
 
