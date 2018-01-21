@@ -2,6 +2,8 @@
 
 {% load solo_tags %}
 {% load sass_tags %}
+{% load leaflet_tags %}
+
 
 {% block extra_stylesheets %}
 <link href="{% sass_src 'css/contact.scss' %}" rel="stylesheet" type="text/css" />
@@ -24,5 +26,6 @@
                 </ul>
             </li>
           </ul>
+          {% leaflet_map "clinic_map" %}
     </div>
 {% endblock %}
