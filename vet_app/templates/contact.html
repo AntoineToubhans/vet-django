@@ -11,24 +11,26 @@
 
 {% block content %}
     {% get_solo 'vet_app.ClinicConfiguration' as clinic_config %}
-    <div class="contact">
-        <h1 class="contact-title">
-            Contacts
-        </h1>
-        <ul>
-            <li>Numéro de téléphone: {{ clinic_config.phone_number.as_national }}</li>
-            <li>Email: {{ clinic_config.email }}</li>
-            <li>Horaires d'ouverture:
-                <ul>
-                    {% for openinghour in clinic_config.opening_hours.all %}
-                        <li>{{ openinghour }}</li>
-                    {% endfor %}
-                </ul>
-            </li>
-            <li>Urgences: 24h/24</li>
-            <li>Adresse: {{ clinic_config.address }}</li>
-        </ul>
+    <div class="full-height">
         {% leaflet_map "clinic_map" callback="window.map_place_clinic_marker" %}
+        <div class="contact">
+            <h1 class="contact-title">
+                Contacts
+            </h1>
+            <ul>
+                <li>Numéro de téléphone: {{ clinic_config.phone_number.as_national }}</li>
+                <li>Email: {{ clinic_config.email }}</li>
+                <li>Horaires d'ouverture:
+                    <ul>
+                        {% for openinghour in clinic_config.opening_hours.all %}
+                            <li>{{ openinghour }}</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                <li>Urgences: 24h/24</li>
+                <li>Adresse: {{ clinic_config.address }}</li>
+            </ul>
+        </div>
     </div>
 {% endblock %}
 
@@ -46,7 +48,7 @@
                 ];
 
                 L.marker(reverted_coordinates).addTo(map);
-                map.setView(reverted_coordinates, 8);
+                map.setView(reverted_coordinates, 14);
             }
         }
     </script>
