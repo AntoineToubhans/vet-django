@@ -72,5 +72,6 @@ system_packages:
   - python-dev
   - python-psycopg2
   - python-virtualenv
+  - libgdal-dev
 
 # vim:ft=ansible:
