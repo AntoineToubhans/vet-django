@@ -1,7 +1,7 @@
 version: '2'
 services:
   server:
-    image: python:3.5.2
+    build: .
     working_dir: /mnt
     volumes:
     - .:/mnt
