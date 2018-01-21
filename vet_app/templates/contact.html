@@ -28,6 +28,26 @@
             <li>Urgences: 24h/24</li>
             <li>Adresse: {{ clinic_config.address }}</li>
         </ul>
-        {% leaflet_map "clinic_map" %}
+        {% leaflet_map "clinic_map" callback="window.map_place_clinic_marker" %}
     </div>
+{% endblock %}
+
+{% block extra_scripts %}
+    {% get_solo 'vet_app.ClinicConfiguration' as clinic_config %}
+    <script type="text/javascript">
+        var coordinates = {{ clinic_config.map_marker.coordinates | safe }};
+
+        function map_place_clinic_marker(map, options) {
+            if (coordinates) {
+                var reverted_coordinates = [
+                    // for somme reason, coordinates are inverted
+                    coordinates[1],
+                    coordinates[0],
+                ];
+
+                L.marker(reverted_coordinates).addTo(map);
+                map.setView(reverted_coordinates, 8);
+            }
+        }
+    </script>
 {% endblock %}
