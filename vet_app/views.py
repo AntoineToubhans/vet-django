@@ -12,6 +12,12 @@ def index(request):
     })
 
 
+def contact(request):
+    return render(request, 'contact.html', {
+        'current_page': 'contact',
+    })
+
+
 def team(request):
     people = People.objects.get_ordered_people()
 

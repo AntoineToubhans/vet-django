@@ -1,11 +1,17 @@
 {% load static %}
 {% load sass_tags %}
+{% load solo_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Clinique Vétérinaire de la Braye{% endblock %}</title>
+        <title>
+            {% block title %}
+                {% get_solo 'vet_app.ClinicConfiguration' as clinic_config %}
+                {{ clinic_config.name }}
+            {% endblock %}
+        </title>
         <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
         <link href="{% sass_src 'css/main.scss' %}" rel="stylesheet" type="text/css" />
         {% block extra_stylesheets %}{% endblock %}

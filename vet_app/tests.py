@@ -1,5 +1,6 @@
 from django.test import TestCase
 
+from .models import ClinicOpeningHour
 from .models import People
 from .models import Service
 
@@ -75,3 +76,17 @@ class ServiceModelTest(TestCase):
             'Le pack vermifugation équides',
             'Location de mat\u00e9riel: N\u00e9bulisateur pour probl\u00e8mes respiratoires',
         ])
+
+
+class ClinicOpeningHourModelTest(TestCase):
+    fixtures = ['openinghour']
+
+    def test_print_morning(self):
+        opening_hour_morning = ClinicOpeningHour.objects.get(pk=1)
+
+        self.assertEqual(str(opening_hour_morning), 'Lundi, Mardi, Mercredi, Jeudi, Vendredi, Samedi de 06h00 à 12h00')
+
+    def test_print_afternoon(self):
+        opening_hour_afternoon = ClinicOpeningHour.objects.get(pk=2)
+
+        self.assertEqual(str(opening_hour_afternoon), 'Lundi, Mardi, Mercredi, Jeudi, Vendredi de 14h00 à 18h00')

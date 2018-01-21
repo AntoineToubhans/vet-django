@@ -1,0 +1,17 @@
+[{
+  "model": "vet_app.clinicopeninghour",
+  "pk": 1,
+  "fields": {
+    "opening": "06:00:00",
+    "closing": "12:00:00",
+    "days": "0,1,2,3,4,5"
+  }
+}, {
+  "model": "vet_app.clinicopeninghour",
+  "pk": 2,
+  "fields": {
+    "opening": "14:00:00",
+    "closing": "18:00:00",
+    "days": "0,1,2,3,4"
+  }
+}]
