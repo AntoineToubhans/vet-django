@@ -25,7 +25,9 @@
                     {% endfor %}
                 </ul>
             </li>
-          </ul>
-          {% leaflet_map "clinic_map" %}
+            <li>Urgences: 24h/24</li>
+            <li>Adresse: {{ clinic_config.address }}</li>
+        </ul>
+        {% leaflet_map "clinic_map" %}
     </div>
 {% endblock %}
