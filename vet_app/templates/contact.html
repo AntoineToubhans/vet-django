@@ -16,6 +16,13 @@
         <ul>
             <li>Numéro de téléphone: {{ clinic_config.phone_number.as_national }}</li>
             <li>Email: {{ clinic_config.email }}</li>
-        </ul>
+            <li>Horaires d'ouverture:
+                <ul>
+                    {% for openinghour in clinic_config.opening_hours.all %}
+                        <li>{{ openinghour }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+          </ul>
     </div>
 {% endblock %}
