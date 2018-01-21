@@ -237,6 +237,16 @@ CKEDITOR_CONFIGS = {
 PHONENUMBER_DEFAULT_REGION = 'FR'
 PHONENUMBER_DB_FORMAT = 'NATIONAL'
 
+
+LEAFLET_CONFIG = {
+    'DEFAULT_CENTER': (48, 4),
+    'DEFAULT_ZOOM': 5,
+    'MIN_ZOOM': 3,
+    'MAX_ZOOM': 18,
+    'RESET_VIEW': False,
+}
+
+
 # Vet app specific options
 VET_APP_MENU = [{
     'href': 'advises',

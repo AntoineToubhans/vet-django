@@ -1,5 +1,7 @@
 from django import forms
 from django.db import models
+from djgeojson.fields import PointField
+from leaflet.admin import LeafletGeoAdmin
 from multiselectfield import MultiSelectField
 from phonenumber_field.modelfields import PhoneNumberField as ModelPhoneNumberField
 from phonenumber_field.formfields import PhoneNumberField as FormPhoneNumberField
@@ -71,8 +73,20 @@ class ClinicConfiguration(SingletonModel):
         blank=True,
     )
 
+    address = models.CharField(
+        max_length=300,
+        verbose_name='Adresse de la clinique',
+        blank=True,
+    )
+
+    map_marker = PointField(
+        blank=True,
+        null=True,
+        verbose_name='Position de la clinique sur la carte',
+    )
+
     class Meta:
-        verbose_name = 'Paramètre de la clinique'
+        verbose_name = 'Paramètres de la clinique'
 
 
 
@@ -87,5 +101,5 @@ class ClinicConfigurationAdminForm(forms.ModelForm):
         fields = "__all__"
 
 
-class ClinicConfigurationAdmin(SingletonModelAdmin):
+class ClinicConfigurationAdmin(SingletonModelAdmin, LeafletGeoAdmin):
     form = ClinicConfigurationAdminForm
