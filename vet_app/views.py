@@ -2,6 +2,7 @@ from django.conf import settings
 from django.shortcuts import render
 
 
+from .models import News
 from .models import People
 from .models import Service
 
@@ -19,8 +20,11 @@ def contact(request):
 
 
 def news(request):
+    news = News.objects.get_ordered_news()
+
     return render(request, 'news.html', {
         'current_page': 'news',
+        'news': news,
     })
 
 

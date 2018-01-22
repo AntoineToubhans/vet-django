@@ -7,6 +7,16 @@
 
 {% block content %}
     <div class="news">
-        Coucou :)
+        {% for item in news %}
+        <div class="news-item">
+            <h1>
+                {{ item.title }}
+            </h1>
+            <div class="my-ckeditor-content">
+                {% autoescape off %}{{ item.content }}{% endautoescape %}
+            </div>
+            <hr/>
+        </div>
+        {% endfor %}
     </div>
 {% endblock %}

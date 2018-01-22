@@ -4,6 +4,11 @@ from ordered_model.models import OrderedModel
 from ordered_model.admin import OrderedModelAdmin
 
 
+class NewsManager(models.Manager):
+    def get_ordered_news(self):
+        return self.filter(is_active=True).order_by('-order')
+
+
 class News(OrderedModel):
     title = models.CharField(
         max_length=200,
@@ -28,10 +33,13 @@ class News(OrderedModel):
 
     content = RichTextUploadingField()
 
+    objects = NewsManager()
+
     class Meta:
         verbose_name = 'Actualité'
         verbose_name_plural = 'Actualités'
 
 
 class NewsAdmin(OrderedModelAdmin):
-    list_display = ('title', 'is_active', 'created_at', 'modified_at')
+    list_display = ('title', 'is_active', 'created_at', 'modified_at', 'move_up_down_links')
+    ordering = [('-order')]
