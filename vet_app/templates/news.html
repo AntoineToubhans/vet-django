@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block extra_stylesheets %}
+{% load sass_tags %}
+<link href="{% sass_src 'css/news.scss' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+    <div class="news">
+        Coucou :)
+    </div>
+{% endblock %}

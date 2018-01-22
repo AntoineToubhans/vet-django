@@ -18,6 +18,12 @@ def contact(request):
     })
 
 
+def news(request):
+    return render(request, 'news.html', {
+        'current_page': 'news',
+    })
+
+
 def team(request):
     people = People.objects.get_ordered_people()
 
