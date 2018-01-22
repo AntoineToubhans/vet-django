@@ -1,6 +1,8 @@
+@import './variables';
+
 .team {
   margin: 0 auto;
-  width: 1024px;
+  width: $normal-width;
 
   @media (max-width: 1024px) {
     width: 768px;

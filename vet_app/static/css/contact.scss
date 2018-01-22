@@ -1,10 +1,12 @@
+@import './variables';
+
 .leaflet-container {
   height: 500px;
 }
 
 .contact {
   margin: 0 auto;
-  width: 1160px;
+  width: $normal-width;
 
   &-title {
     margin: 20px 0;
