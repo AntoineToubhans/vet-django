@@ -258,8 +258,8 @@ VET_APP_MENU = [{
     'href': 'gallery',
     'name': 'Galerie',
 }, {
-    'href': 'newsletters',
-    'name': 'Newsletters',
+    'href': 'news',
+    'name': 'Actualités',
 }, {
     'href': 'craiglist',
     'name': 'Petites annonces',

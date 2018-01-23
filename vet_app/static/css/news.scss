@@ -1,0 +1,54 @@
+@import './variables';
+
+.news {
+  margin: 0 auto;
+  max-width: $normal-width;
+
+  display: flex;
+  flex-direction: column;
+
+  &-item {
+    border-left: 6px solid $blue-color-2;
+    border-bottom-right-radius: 50px;
+
+    background-color: #f8f8f8;
+
+    padding: 0 20px 15px 20px;
+    margin: 0 25px 25px 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      margin: 25px 0 25px 0;
+
+      &-title {
+        color: $blue-color-1;
+        font-weight: bold;
+        font-size: 32px;
+
+        svg, span { margin-right: 10px }
+      }
+
+      &-date {
+        font-style: italic;
+        color: grey;
+      }
+    }
+
+    .my-ckeditor-content {
+      padding-left: 25px;
+    }
+  }
+}
+
+
+.pagination {
+  margin: 10px 0 10px 0;
+}

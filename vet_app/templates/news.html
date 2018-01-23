@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% load sass_tags %}
+{% load vet_extras %}
+
+
+{% block extra_stylesheets %}
+    <link href="{% sass_src 'css/news.scss' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+    {% pagination news paginator %}
+    <div class="news">
+        {% for item in news %}
+        <div class="news-item">
+            <div class="news-item-header">
+                <div class="news-item-header-title">
+                    <span class="fa fa-newspaper"></span>
+                    {{ item.title }}
+                </div>
+                <div class="news-item-header-date">Publié le {{ item.created_at|date }}</div>
+            </div>
+            <div class="my-ckeditor-content">
+                {% autoescape off %}{{ item.content }}{% endautoescape %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% pagination news paginator %}
+{% endblock %}

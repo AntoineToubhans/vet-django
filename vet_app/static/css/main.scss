@@ -81,3 +81,87 @@ header {
 .full-height {
   min-height: calc(100vh - 75px);
 }
+
+.my-ckeditor-content {
+  /* Hack: copied from ckeditor/contents.css */
+  font-size: 13px;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    line-height: 1.2;
+  }
+
+  blockquote {
+    font-style: italic;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    padding: 2px 0;
+    border-style: solid;
+    border-color: #ccc;
+    border-width: 0;
+    padding-left: 20px;
+    padding-right: 8px;
+    border-left-width: 5px;
+  }
+
+  .math-featured {
+    padding: 20px;
+    box-shadow: 0 0 2px rgba(200, 0, 0, 1);
+    background-color: rgba(255, 0, 0, 0.05);
+    margin: 10px;
+  }
+
+  .image-clean {
+    border: 0;
+    background: none;
+    padding: 0;
+  }
+
+  .image-clean > figcaption {
+    font-size: .9em;
+    text-align: right;
+  }
+
+  .image-grayscale {
+    background-color: white;
+    color: #666;
+  }
+
+  .image-grayscale img, img.image-grayscale {
+    filter: grayscale(100%);
+  }
+}
+
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  & > a,
+  & > div {
+    background-color: white;
+    text-align: center;
+    width: 25px;
+    height: 20px;
+    padding-top: 5px;
+    border-radius: 50%;
+    margin: 5px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+
+    &.disabled {
+      color: lightgray;
+    }
+
+    &.active {
+      background-color: $blue-color-3;
+    }
+  }
+
+
+  .icon {
+    height: 21px;
+    padding-top: 4px;
+  }
+}
