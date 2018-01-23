@@ -130,3 +130,38 @@ header {
     filter: grayscale(100%);
   }
 }
+
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  & > a,
+  & > div {
+    background-color: white;
+    text-align: center;
+    width: 25px;
+    height: 20px;
+    padding-top: 5px;
+    border-radius: 50%;
+    margin: 5px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+
+    &.disabled {
+      color: lightgray;
+    }
+
+    &.active {
+      background-color: $blue-color-3;
+    }
+  }
+
+
+  .icon {
+    height: 21px;
+    padding-top: 4px;
+  }
+}

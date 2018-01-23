@@ -1,0 +1,27 @@
+<div class="pagination">
+    {% if object_list.has_previous %}
+        <a class="icon" href="?page={{ object_list.previous_page_number }}">
+            <span class="fa fa-angle-double-left"></span>
+        </a>
+    {% else %}
+        <div class="icon disabled">
+            <span class="fa fa-angle-double-left"></span>
+        </div>
+    {% endif %}
+    {% for i in page_range %}
+        {% if object_list.number == i %}
+            <div class="active">{{ i }}</div>
+        {% else %}
+            <a href="?page={{ i }}">{{ i }}</a>
+        {% endif %}
+    {% endfor %}
+    {% if object_list.has_next %}
+        <a class="icon" href="?page={{ object_list.next_page_number }}">
+            <span class="fa fa-angle-double-right"></span>
+        </a>
+    {% else %}
+        <div class="icon disabled">
+            <span class="fa fa-angle-double-right"></span>
+        </div>
+    {% endif %}
+</div>

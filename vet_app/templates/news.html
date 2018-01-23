@@ -1,11 +1,15 @@
 {% extends "layout.html" %}
 
-{% block extra_stylesheets %}
 {% load sass_tags %}
-<link href="{% sass_src 'css/news.scss' %}" rel="stylesheet" type="text/css" />
+{% load vet_extras %}
+
+
+{% block extra_stylesheets %}
+    <link href="{% sass_src 'css/news.scss' %}" rel="stylesheet" type="text/css" />
 {% endblock %}
 
 {% block content %}
+    {% pagination news paginator %}
     <div class="news">
         {% for item in news %}
         <div class="news-item">
@@ -22,4 +26,5 @@
         </div>
         {% endfor %}
     </div>
+    {% pagination news paginator %}
 {% endblock %}

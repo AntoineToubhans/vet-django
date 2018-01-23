@@ -22,3 +22,11 @@ def service_menu(context):
         'services': Service.objects.get_services(),
         'selected_service_id': current_service.id if current_service else None,
     }
+
+
+@register.inclusion_tag('pagination.html')
+def pagination(object_list, paginator):
+    return {
+        'object_list': object_list,
+        'page_range': paginator.page_range,
+    }
