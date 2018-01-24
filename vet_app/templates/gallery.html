@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% block extra_stylesheets %}
+    <link href="{% static 'js/lib/lightgallery.js/dist/css/lightgallery.min.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block extra_scripts %}
+    <script type="text/javascript" src="{% static 'js/lib/lightgallery.js/dist/js/lightgallery.min.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    La galerie ici :)
+{% endblock %}

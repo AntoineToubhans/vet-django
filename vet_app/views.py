@@ -19,6 +19,12 @@ def contact(request):
     })
 
 
+def gallery(request):
+    return render(request, 'gallery.html', {
+        'current_page': 'gallery',
+    })
+
+
 def news(request):
     all_news = News.objects.get_ordered_news()
     paginator = Paginator(all_news, 5)
