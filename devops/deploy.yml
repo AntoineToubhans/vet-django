@@ -23,9 +23,9 @@
       notify:
       - restart nginx
 
-    - name: Install npm packages
-      npm:
-        path: "{{ install_root }}/{{ project_name }}"
+#    - name: Install npm packages
+#      npm:
+#        path: "{{ install_root }}/{{ project_name }}"
 
     - name: django migrate
       django_manage:

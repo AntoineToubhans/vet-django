@@ -8,8 +8,8 @@
     - name: 'update'
       raw: sudo apt-get update
 
-    - name: 'install python2'
-      raw: sudo apt-get -y install python-simplejson
+#    - name: 'install python2'
+#      raw: sudo apt-get -y install python-simplejson
 
   tasks:
     - name: update www-data shell
@@ -70,6 +70,9 @@
 
     # python 3 by default, hack to make django_manage role work with python3
     - file: src=/usr/bin/python3 dest=/usr/bin/python state=link
+
+    # - name: make sure the latest npm is installed
+    #   npm: name=npm global=true
 
   handlers:
     - name: restart nginx
