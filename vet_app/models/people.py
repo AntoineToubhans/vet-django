@@ -81,5 +81,5 @@ class PeopleAdmin(ImageCroppingMixin, OrderedModelAdmin):
 
     class Media:
         js = (
-            'js/jquery.min.js',
+            'js/lib/jquery/dist/jquery.min.js',
         )
