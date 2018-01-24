@@ -71,8 +71,8 @@
     # python 3 by default, hack to make django_manage role work with python3
     - file: src=/usr/bin/python3 dest=/usr/bin/python state=link
 
-    - name: make sure the latest npm is installed
-      npm: name=npm global=true
+    # - name: make sure the latest npm is installed
+    #   npm: name=npm global=true
 
   handlers:
     - name: restart nginx
