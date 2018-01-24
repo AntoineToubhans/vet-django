@@ -162,6 +162,7 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'sass_processor.finders.CssFinder',
+    'npm.finders.NpmFinder',
 ]
 
 
@@ -245,6 +246,11 @@ LEAFLET_CONFIG = {
     'MAX_ZOOM': 18,
     'RESET_VIEW': False,
 }
+
+
+# Django npm
+NPM_ROOT_PATH = BASE_DIR
+NPM_STATIC_FILES_PREFIX = os.path.join('js', 'lib')
 
 
 # Vet app specific options

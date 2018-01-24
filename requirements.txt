@@ -14,3 +14,4 @@ django-multiselectfield==0.1.8
 jsonfield==2.0.2
 django-geojson==2.11.0
 django-leaflet==0.23.0
+django-npm==1.0.0

@@ -3,3 +3,4 @@ vendor
 static/**
 devops/*.retry
 media/**
+node_modules/**
