@@ -1,0 +1,26 @@
+{
+  "name": "vet-django",
+  "version": "1.0.0",
+  "description": "A web app for vetenary clinics",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntoineToubhans/vet-django.git"
+  },
+  "author": "Antoine Toubhans",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AntoineToubhans/vet-django/issues"
+  },
+  "homepage": "https://github.com/AntoineToubhans/vet-django#readme",
+  "dependencies": {
+    "font-awesome": "4.7.0",
+    "jquery": "^3.3.1"
+  }
+}
