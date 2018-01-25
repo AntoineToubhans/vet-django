@@ -1,12 +1,26 @@
-#lightgallery {
-  margin: 10px 30px;
+.gallery {
+  margin: 10px;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
-  a {
-    text-decoration: none;
+  figure {
+    margin: 1px 4px;
+    a {
+      text-decoration: none;
 
-    img {
-      height: 300px;
+      img {
+        height: 300px;
+      }
+    }
+
+    figcaption {
+      display: none;
     }
   }
+}
+
+.pswp__caption__center {
+  text-align: center !important;
 }
