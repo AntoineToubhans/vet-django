@@ -10,6 +10,6 @@ jquery@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
 
-lightgallery.js@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/lightgallery.js/-/lightgallery.js-1.0.2.tgz#554ebc12515a277862e771fcd9bf8e99e4ad1ec6"
+photoswipe@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/photoswipe/-/photoswipe-4.1.2.tgz#95c20a75cea23b70d6299641cad82e03cae7f797"
