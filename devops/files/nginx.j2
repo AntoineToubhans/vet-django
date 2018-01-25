@@ -3,6 +3,7 @@ server {
 	server_name {{ server_name }};
 	charset utf-8;
 
+	client_max_body_size 8M;
 
 	location /static {
 		alias {{ static_root }};
