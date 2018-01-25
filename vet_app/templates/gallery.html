@@ -1,14 +1,17 @@
 {% extends "layout.html" %}
 
+{% load sass_tags %}
 {% load static %}
 {% load thumbnail %}
 
 {% block extra_stylesheets %}
+    <link href="{% sass_src 'css/gallery.scss' %}" rel="stylesheet" type="text/css" />
     <link href="{% static 'js/lib/lightgallery.js/dist/css/lightgallery.min.css' %}" rel="stylesheet" type="text/css" />
 {% endblock %}
 
 {% block extra_scripts %}
     <script type="text/javascript" src="{% static 'js/lib/lightgallery.js/dist/js/lightgallery.min.js' %}"></script>
+
     <script type="text/javascript">
         $(document).ready(function() {
             lightGallery(document.getElementById('lightgallery'));
