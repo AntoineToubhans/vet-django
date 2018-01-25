@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 
 {% load static %}
+{% load thumbnail %}
 
 {% block extra_stylesheets %}
     <link href="{% static 'js/lib/lightgallery.js/dist/css/lightgallery.min.css' %}" rel="stylesheet" type="text/css" />
@@ -8,8 +9,20 @@
 
 {% block extra_scripts %}
     <script type="text/javascript" src="{% static 'js/lib/lightgallery.js/dist/js/lightgallery.min.js' %}"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            lightGallery(document.getElementById('lightgallery'));
+        });
+    </script>
 {% endblock %}
 
 {% block content %}
-    La galerie ici :)
+    <div id="lightgallery">
+        {% for image in images %}
+            {% thumbnail image.image 400x400 upscale as thumb %}
+            <a href="{{ image.image.url }}">
+                <img src="{{ thumb.url }}" />
+            </a>
+        {% endfor %}
+    </div>
 {% endblock %}
