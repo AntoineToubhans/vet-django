@@ -6,12 +6,47 @@
   justify-content: center;
 
   figure {
-    margin: 1px 4px;
+    margin: 3px;
+
     a {
       text-decoration: none;
+      position: relative;
+      display: block;
+      height: 300px;
+      overflow: hidden;
 
       img {
         height: 300px;
+        -webkit-transition: -webkit-transform 0.15s ease 0s;
+        -moz-transition: -moz-transform 0.15s ease 0s;
+        -o-transition: -o-transform 0.15s ease 0s;
+      }
+
+      .gallery-poster {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: background-color 0.15s ease 0s;
+
+        i {
+          padding-top: 134px;
+          display: none;
+          color: lightgray;
+          font-size: 32px;
+        }
+      }
+
+      &:hover img {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+      }
+
+      &:hover .gallery-poster {
+        background-color: rgba(0, 0, 0, 0.5);
+
+        i { display: inherit;}
       }
     }
 
