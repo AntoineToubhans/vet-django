@@ -25,7 +25,7 @@
     <div class="gallery">
         {% for image in images %}
             {% thumbnail image.image 400x400 upscale as small %}
-            {% thumbnail image.image 1280x1024 upscale as medium %}
+            {% thumbnail image.image 1600x1200 upscale as medium %}
             <figure>
                 <a
                     href="{{ medium.url }}"
