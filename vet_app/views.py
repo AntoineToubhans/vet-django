@@ -2,6 +2,7 @@ from django.conf import settings
 from django.shortcuts import render
 from django.core.paginator import Paginator
 
+from .models import GalleryImage
 from .models import News
 from .models import People
 from .models import Service
@@ -16,6 +17,15 @@ def index(request):
 def contact(request):
     return render(request, 'contact.html', {
         'current_page': 'contact',
+    })
+
+
+def gallery(request):
+    images = GalleryImage.objects.all().order_by('order')
+
+    return render(request, 'gallery.html', {
+        'current_page': 'gallery',
+        'images': images,
     })
 
 
