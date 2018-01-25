@@ -24,13 +24,14 @@
 {% block content %}
     <div class="gallery">
         {% for image in images %}
-            {% thumbnail image.image 400x400 upscale as thumb %}
+            {% thumbnail image.image 400x400 upscale as small %}
+            {% thumbnail image.image 1280x1024 upscale as medium %}
             <figure>
                 <a
-                    href="{{ image.image.url }}"
-                    data-size="{{ image.image.width }}x{{ image.image.height }}"
+                    href="{{ medium.url }}"
+                    data-size="{{ medium.width }}x{{ medium.height }}"
                 >
-                    <img src="{{ thumb.url }}" />
+                    <img src="{{ small.url }}" />
                 </a>
                 <figcaption>{{ image.description }}</figcaption>
             </figure>
