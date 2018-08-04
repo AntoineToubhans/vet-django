@@ -1,7 +1,7 @@
 from vet_project.settings import *
 
 DEBUG = False
-ALLOWED_HOSTS = ['52.14.42.220', 'vet.toubhans.org']
+ALLOWED_HOSTS = ['18.222.232.61', 'vet.toubhans.org']
 
 DATABASES = {
  'default': {
