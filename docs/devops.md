@@ -1,11 +1,11 @@
 # Devops
 
-Staging server: 52.14.42.220 (TBD)
+Staging server: 18.222.232.61 (TBD)
 
 Ssh to the staging server:
 
 ```bash
-ssh ubuntu@52.14.42.220
+ssh ubuntu@18.222.232.61
 ```
 
 ## Provisionning
